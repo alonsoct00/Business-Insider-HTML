@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@300;400;700&display=swap');
+
+
+.f-roboto {
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.f-roboto-mono {
+    font-family: 'Roboto Mono', monospace;
+}
+
+#lp-insider-talks {
+
+    header {
+        background: url('../assets/bg-lp2x.jpg') center center / cover #551273;
+
+        h2 {
+            text-align: center;
+            color: #fff;
+            border: 1px solid #fff;
+            font-size: 24px;
+            font-family: 'Roboto Mono', monospace;
+            border-radius: 50px;
+            padding: 8px 0;
+            margin: 16px 0 24px;
+
+        }
+
+        p {
+            font-size: 1rem;
+
+            &.year-txt {
+                font-family: 'Roboto Mono', Arial, Tahoma, sans-serif;
+                font-size: 24px;
+                text-align: center;
+                margin: 4px 0;
+            }
+        }
+
+        #header-intro-text {
+            color: #fff;
+
+            p {
+                position: relative;
+                padding: 0 0 40px 0;
+
+                &::after {
+                    content: '';
+                    width: 50px;
+                    height: 50px;
+                    position: absolute;
+                    background: url(../assets/puntos-decoracion2x.png) no-repeat center / 100%;
+                    display: block;
+                    margin-bottom: 20px;
+                    clear: both;
+                    float: left;
+                    bottom: -50px;
+                }
+            }
+        }
+
+        #countdown {
+            margin: 40px auto;
+            color: #ffff;
+
+            li {
+                display: inline-block;
+                font-size: 1em;
+                list-style-type: none;
+                padding: 0;
+                text-transform: uppercase;
+
+                &.days {
+                    padding-right: 24px;
+                }
+            }
+
+            li span {
+                display: flex;
+                font-size: 4rem;
+                font-weight: 700;
+                align-items: center;
+                justify-content: normal;
+
+                &#hours::after,
+                &#minutes::after {
+                    content: ":";
+                    text-align: center;
+                }
+            }
+        }
+
+        #head-top-logo {
+            width: 100%;
+            max-width: 320px;
+            display: block;
+            margin: 0px auto;
+            text-align: center;
+            position: relative;
+
+            &::before {
+                content: '';
+                width: 50px;
+                height: 50px;
+                position: relative;
+                background: url(../assets/puntos-decoracion2x.png) no-repeat center / 100%;
+                display: block;
+                margin-bottom: 20px;
+                clear: both;
+                float: right;
+            }
+        }
+
+        .custom-cta {
+            display: block;
+            width: auto;
+            min-width: 200px;
+            margin: 0px auto;
+            border-radius: 50px;
+            text-align: center;
+            opacity: 0.8;
+            font-size: 18px;
+            color: #571772;
+            position: relative;
+
+            &:hover,
+            &:focus {
+                opacity: 1;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .img-container {
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    #all-info {
+    	background: url('../assets/bg-lp2x.jpg') center center / cover #551273;
+    }
+}
+
+
+@media all and (max-width: 768px) {
+
+    #lp-insider-talks {
+
+    	#countdown {
+            margin: 40px auto;
+            color: #ffff;
+
+            li {
+                display: inline-block;
+                font-size: 0.8em;
+
+                &.days {
+                    padding-right: 18px;
+                }
+            }
+
+            li span {
+                display: flex;
+                font-size: 2rem;
+
+                &#hours::after,
+                &#minutes::after {
+                    content: ":";
+                    text-align: center;
+                }
+            }
+        }
+
+    }
+
+}
