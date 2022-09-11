@@ -17,7 +17,7 @@
         mm = String(today.getMonth() + 1).padStart(2, "0"),
         yyyy = today.getFullYear(),
         nextYear = yyyy + 1,
-        dayMonth = "09/30/",
+        dayMonth = "10/15/",
         birthday = dayMonth + yyyy;
 
     today = mm + "/" + dd + "/" + yyyy;
@@ -33,9 +33,9 @@
                 distance = countDown - now;
 
             document.getElementById("days").innerText = Math.floor(distance / (day)),
-            document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-            document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-            document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+                document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+                document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+                document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
 
             //do something later when date is reached
             if (distance < 0) {
@@ -46,3 +46,32 @@
             //seconds
         }, 0)
 }());
+
+
+$(document).ready(function() {
+    $('.agenda-points-carousel').slick({
+        vertical: true,
+        verticalSwiping: true,
+        centerMode: true,
+        centerPadding: '120px',
+        slidesToShow: 3,
+        slidesToScroll: 1
+    });
+
+     $('.speakers-carousel').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.speakers-carousel-nav'
+    });
+    $('.speakers-carousel-nav').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      asNavFor: '.speakers-carousel',
+      dots: false,
+      centerMode: true,
+      centerPadding: '40px',
+      focusOnSelect: true
+  	});
+});
