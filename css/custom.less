@@ -15,6 +15,11 @@ img {
     display: block;
 }
 
+ul {
+    padding: 0;
+    margin: 0;
+}
+
 #lp-insider-talks {
 
     .navbar {
@@ -31,6 +36,18 @@ img {
 
     header {
         background: url('../assets/bg-lp2x.jpg') center center / cover #551273;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 25px;
+            height: 200px;
+            position: absolute;
+            background: url(../assets/powered_by_w.png) no-repeat center / contain;
+            display: block;
+            right: 20px;
+            bottom: 0;
+        }
 
         h2 {
             text-align: center;
@@ -208,13 +225,26 @@ img {
 
     }
 
-    #bimx-agenda {
+    #bimx-agenda-points {
         font-family: 'Roboto Mono', Arial, Tahoma, sans-serif;
         color: #52208a;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 25px;
+            height: 200px;
+            position: absolute;
+            background: url(../assets/powered_by.png) no-repeat center / contain;
+            display: block;
+            right: 20px;
+            bottom: 0;
+        }
 
         h2 {
             letter-spacing: 10px;
             text-transform: uppercase;
+            font-family: 'Roboto Mono', Arial, Tahoma, sans-serif;
         }
 
         #agenda-carousel-wrapper {
@@ -293,10 +323,12 @@ img {
     #bimx-speakers {
         background: url('../assets/bg-lp2x.jpg') center center / cover #551273;
         color: #fff;
+        position: relative;
 
         h2 {
             letter-spacing: 10px;
             text-transform: uppercase;
+            font-family: 'Roboto Mono', Arial, Tahoma, sans-serif;
         }
 
         .speaker-item {
@@ -311,6 +343,21 @@ img {
                 border-bottom: 2px solid #fff;
                 margin: 20px auto 20px auto;
                 padding-bottom: 4px;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    width: 50px;
+                    height: 50px;
+                    position: absolute;
+                    background: url(../assets/puntos-decoracion2x.png) no-repeat center / 100%;
+                    display: block;
+                    margin-bottom: 20px;
+                    clear: both;
+                    float: left;
+                    left: -40px;
+                    top: 100px;
+                }
             }
 
             .speaker-name {
@@ -368,10 +415,211 @@ img {
             }
         }
     }
+
+    #bimx-podcasting {
+        background: url('../assets/bg-lp2x.jpg') center center / cover #551273;
+        color: #fff;
+        position: relative;
+        padding-bottom: 250px !important;
+
+        &::after {
+            content: '';
+            width: 25px;
+            height: 200px;
+            position: absolute;
+            background: url(../assets/powered_by_w.png) no-repeat center / contain;
+            display: block;
+            right: 20px;
+            bottom: 0;
+        }
+
+
+        h2 {
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            font-family: 'Roboto Mono', Arial, Tahoma, sans-serif;
+
+            &.main-title-section {
+                position: relative;
+                display: inline-block;
+
+                &::before {
+                    content: '';
+                    width: 50px;
+                    height: 50px;
+                    position: relative;
+                    background: url(../assets/puntos-decoracion2x.png) no-repeat center / 100%;
+                    display: block;
+                    margin-bottom: 20px;
+                    clear: both;
+                    float: right;
+                }
+            }
+        }
+
+        #podcast-carousel-wrapper {
+            position: relative;
+
+            button.slick-arrow {
+                top: 0;
+            }
+
+            &::before {
+                content: '';
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                background: url(../assets/puntos-decoracion2x.png) no-repeat center / 100%;
+                display: block;
+                margin-bottom: 20px;
+                clear: both;
+                float: left;
+                left: -20px;
+                bottom: 30%;
+                z-index: 1;
+            }
+        }
+
+        .podcast-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .podcast-title {
+                font-family: 'Roboto Mono', Arial, Tahoma, sans-serif;
+                font-size: 1.5rem;
+                letter-spacing: normal;
+                text-transform: uppercase;
+            }
+
+            .podcast-details {
+                display: block;
+                clear: both;
+                text-align: center;
+
+                h3 {
+                    font-family: 'Roboto Mono', Arial, Tahoma, sans-serif;
+                    letter-spacing: normal;
+                    text-transform: uppercase;
+                    font-size: 18px;
+                }
+            }
+
+            .video-wrapper {
+                background: #000;
+                width: 100%;
+                display: block;
+                margin: 40px auto;
+                position: relative;
+
+                video {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    #bimx-articles {
+        font-family: 'Roboto Mono', Arial, Tahoma, sans-serif;
+        color: #52208a;
+        position: relative;
+        padding-top: 250px !important;
+
+        #bimx-intro-img {
+            position: relative;
+
+            .img-container {
+                width: 250px;
+                margin: 0px auto;
+                display: block;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: auto;
+                bottom: 0;
+            }
+        }
+
+        .article-item {
+            h2 {
+                font-family: 'Roboto Mono', Arial, Tahoma, sans-serif;
+                font-size: 1.3rem;
+                margin-bottom: 16px;
+            }
+
+            .p-text {
+                font-family: 'Roboto', Arial, sans-serif;
+                font-size: 1rem;
+            }
+        }
+
+        .article-img {
+            display: block;
+            margin: 20px auto 20px auto;
+        }
+    }
+
+    #bimx-agenda-events {
+        background: url('../assets/bg-lp2x.jpg') center center / cover #551273;
+        font-family: 'Roboto Mono', Arial, Tahoma, sans-serif;
+        color: #ffffff;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 25px;
+            height: 200px;
+            position: absolute;
+            background: url(../assets/powered_by_w.png) no-repeat center / contain;
+            display: block;
+            right: 20px;
+            bottom: 0;
+        }
+
+        h2 {
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            font-family: 'Roboto Mono', Arial, Tahoma, sans-serif;
+        }
+
+        .agenda-event {
+            text-align: center;
+            margin-bottom: 40px;
+
+            h3 {
+                font-family: 'Roboto Mono', Arial, Tahoma, sans-serif;
+            }
+
+            p {
+                font-family: 'Roboto', Arial, sans-serif;
+                font-size: 1rem;
+            }
+        }
+
+        .sponsor-item {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            margin: 0 12px;
+
+            .img-container {
+                width: 100%;
+                max-width: 120px;
+                display: block;
+            }
+        }
+    }
 }
 
 
 @media all and (max-width: 768px) {
+
+    .container.px-5 {
+        padding: 0 1rem !important;
+    }
 
     #lp-insider-talks {
 
@@ -390,7 +638,7 @@ img {
 
             li span {
                 display: flex;
-                font-size: 2rem;
+                font-size: 3rem !important;
 
                 &#hours::after,
                 &#minutes::after {
@@ -409,6 +657,74 @@ img {
             }
 
         }
+
+        #bimx-agenda-points {
+            #agenda-carousel-wrapper {
+                .agenda-point-item h3 {
+                    filter: blur(0);
+                }
+            }
+        }
+
+        #bimx-speakers {
+            .speaker-item {
+                .speaker-resume {
+                    max-width: 100%;
+
+                }
+            }
+
+            .slick-prev.slick-arrow {
+                left: -10px !important;
+                z-index: 1;
+            }
+
+            .slick-next.slick-arrow {
+                right: 0px !important;
+                z-index: 1;
+            }
+
+            .slick-prev:before,
+            .slick-next:before {
+                font-size: 30px;
+                color: #fff;
+            }
+        }
+
+
+        #bimx-podcasting {
+
+            .podcast-title {
+                width: 95%;
+                text-align: center;
+                padding: 0 20px;
+            }
+
+            .podcast-carousel {
+                .slick-arrow {
+                    top: 15px;
+                }
+
+                .slick-next {
+                    right: 0;
+                }
+
+                .slick-prev {
+                    left: -15px;
+                }
+
+                .slick-prev:before,
+                .slick-next:before {
+                    font-size: 35px;
+                    color: #fff;
+                }
+            }
+
+
+        }
+
+
+
 
     }
 

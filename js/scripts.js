@@ -55,23 +55,49 @@ $(document).ready(function() {
         centerMode: true,
         centerPadding: '120px',
         slidesToShow: 3,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 580,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    centerPadding: '120px'
+                }
+            }
+        ]
     });
 
-     $('.speakers-carousel').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      fade: true,
-      asNavFor: '.speakers-carousel-nav'
+    $('.speakers-carousel').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.speakers-carousel-nav'
     });
     $('.speakers-carousel-nav').slick({
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      asNavFor: '.speakers-carousel',
-      dots: false,
-      centerMode: true,
-      centerPadding: '40px',
-      focusOnSelect: true
-  	});
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.speakers-carousel',
+        dots: false,
+        centerMode: true,
+        centerPadding: '40px',
+        focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 580,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    centerPadding: '60px'
+                }
+            }
+        ]
+    });
+    $('.podcast-carousel').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1
+    })
 });
