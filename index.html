@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Business Frontpage - Start Bootstrap Template</title>
+    <title>Business Insider Talks</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap icons-->
@@ -20,16 +20,19 @@
 
 <body id="lp-insider-talks">
     <!-- Responsive navbar-->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
         <div class="container px-5">
-            <a class="navbar-brand" href="#!"></a>
+            <a class="navbar-brand" href="/"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">Item 1</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">Item 2</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">Item 3</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#all-info">¿Qué es Inside Talks?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#bimx-agenda-points">Temas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#bimx-speakers">Las voces presentes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#bimx-podcasting">Una mirada al futuro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#bimx-articles">Notas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#bimx-agenda-events">Agenda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#bimx-alliances">Aliados estratégicos</a></li>
                 </ul>
             </div>
         </div>
@@ -52,7 +55,7 @@
                                 <p class="p-text mb-5 text-center">
                                     <b>Somos</b> la plataforma de <b>Business Insider México</b> para acercar a nuestra audiencia con los líderes que están cambiando día a día <b>la manera de hacer negocios, no solo en el país, sino en el mundo.</b>
                                 </p>
-                                <a class="btn btn-light btn-sm px-4 custom-cta" href="#">Conoce más</a>
+                                <a class="btn btn-light btn-sm px-4 custom-cta" href="#bimx-agenda-points">Conoce más</a>
                             </div>
                             <div id="countdown" class="text-center f-roboto-mono">
                                 <h3>Faltan</h3>
@@ -118,6 +121,7 @@
                     <div class="text-center mb-5">
                         <h2 class="fw-bolder">TEMAS</h2>
                     </div>
+                    <!--Carrusel de temas, para agregar uno nuevo, añadir desde el bloque "agenda-point-item"-->
                     <div id="agenda-carousel-wrapper">
                         <div class="agenda-points-carousel">
                             <div class="agenda-point-item">
@@ -150,6 +154,7 @@
                     </div>
                 </div>
                 <div id="speakers-carousel-wrapper">
+                    <!--Carrusel de speakers "target", se controla con el carousel de navegación, para agregar un nuevo slide, agregar todo el bloque desde "speaker-item"-->
                     <div class="speakers-carousel">
                         <div class="speaker-item text-center">
                             <span class="img-container speaker-img">
@@ -207,11 +212,54 @@
                                 </article>
                             </div>
                         </div>
+                        <div class="speaker-item text-center">
+                            <span class="img-container speaker-img">
+                                <img src="assets/dummy-prod-1.jpg" alt="">
+                            </span>
+                            <div class="speaker-details">
+                                <h2 class="speaker-name">Abril_Berhumea</h2>
+                                <p class="speaker-titles">
+                                    Lorem ipsum dolor amet
+                                </p>
+                                <article class="speaker-resume">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas modi, placeat earum, nulla debitis consequatur ut soluta, molestias odit nam suscipit optio ipsam maxime fugit. Obcaecati libero commodi, officiis ipsa.
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="speaker-item text-center">
+                            <span class="img-container speaker-img">
+                                <img src="assets/dummy-prod-1.jpg" alt="">
+                            </span>
+                            <div class="speaker-details">
+                                <h2 class="speaker-name">Abril_Berhumea</h2>
+                                <p class="speaker-titles">
+                                    Lorem ipsum dolor amet
+                                </p>
+                                <article class="speaker-resume">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas modi, placeat earum, nulla debitis consequatur ut soluta, molestias odit nam suscipit optio ipsam maxime fugit. Obcaecati libero commodi, officiis ipsa.
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
                     </div>
+                    <!--Navegación del carousel de speakers (speakers-carousel-nav), si se añade un item en el "target" añadir uno aquí también (card-speaker) en el orden correspondiente-->
                     <div class="speakers-carousel-nav">
                         <div class="card-speaker">
                             <span class="img-container">
                                 <img src="assets/dummy-prod-1.jpg" alt="Geronimo Avila">
+                            </span>
+                        </div>
+                        <div class="card-speaker">
+                            <span class="img-container">
+                                <img src="assets/dummy-prod-1.jpg" alt="">
+                            </span>
+                        </div>
+                        <div class="card-speaker">
+                            <span class="img-container">
+                                <img src="assets/dummy-prod-1.jpg" alt="">
                             </span>
                         </div>
                         <div class="card-speaker">
@@ -237,6 +285,7 @@
                         <h2 class="fw-bolder main-title-section">UNA MIRADA AL <br /> FUTURO</h2>
                     </div>
                 </div>
+                <!--Carrusel de podcasts, para agregar uno nuevo, añadir desde el bloque "podcast-item"-->
                 <div id="podcast-carousel-wrapper">
                     <div class="podcast-carousel">
                         <div class="podcast-item">
@@ -343,7 +392,7 @@
                 </div>
             </div>
             <div class="row d-flex flex-column justify-content-between align-items-center mt-5">
-                <div class="text-center mb-5 mt-5">
+                <div class="text-center mb-5 mt-5" id="bimx-alliances">
                     <h2 class="fw-bolder">ALIADOS ESTRATÉGICOS</h2>
                 </div>
                 <div class="col-md-12 mt-3">
