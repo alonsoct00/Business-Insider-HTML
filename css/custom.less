@@ -1,12 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@300;400;700&display=swap');
+@font-face {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5vAw.ttf) format('truetype');
+}
 
+@font-face {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlvAw.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/robotomono/v22/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vqPQw.ttf) format('truetype');
+}
+
+@white-color: #fff;
+@purple57: #571772;
+@purple52: #52208a;
+@font_family_1: Roboto, Arial, sans-serif;
+@font_family_2: 'Roboto Mono', monospace;
+@font_family_3: 'Roboto Mono', Arial, Tahoma, sans-serif;
 
 .f-roboto {
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: @font_family_1;
 }
 
 .f-roboto-mono {
-    font-family: 'Roboto Mono', monospace;
+    font-family: @font_family_2;
 }
 
 img {
@@ -29,22 +65,48 @@ ul {
             color: #fff;
 
             a {
-                color: #fff;
+                color: @white-color;
                 font-family: 'Roboto Mono', monospace;
                 transition: all 0.3s ease-in-out;
                 letter-spacing: normal;
                 font-size: 0.8rem;
                 opacity: 0.85;
-                &:hover,&:focus {
+
+                &:hover,
+                &:focus {
                     text-decoration: underline;
                     font-weight: 700;
                     opacity: 1;
                 }
+
                 &.active {
                     font-weight: 900;
                     opacity: 1;
                 }
             }
+        }
+    }
+
+    #top-section-info {
+        position: relative;
+
+        &:after {
+            content: "";
+            width: 100%;
+            max-width: 340px;
+            margin: 0px auto;
+            height: 70%;
+            display: block;
+            position: absolute;
+            top: 5%;
+            right: 0;
+            left: 0;
+            bottom: auto;
+            border-radius: 20px;
+            background: linear-gradient(rgb(255 255 255) 0%, #1f0928 99.88%, #1f0928 100%);
+            background: #fff;
+            opacity: 0.2;
+            z-index: 0;
         }
     }
 
@@ -71,7 +133,11 @@ ul {
             font-family: 'Roboto Mono', monospace;
             border-radius: 50px;
             padding: 8px 0;
-            margin: 16px 0 24px;
+            margin: 16px auto 24px;
+            display: block;
+            width: auto;
+            min-width: 400px;
+            flex: 0 0 auto;
 
         }
 
@@ -89,12 +155,14 @@ ul {
 
         #header-intro-text {
             color: #fff;
+            position: relative;
+            z-index: 1;
 
             p {
                 position: relative;
                 padding: 0 0 40px 0;
 
-                &::after {
+                /*&::after {
                     content: '';
                     width: 50px;
                     height: 50px;
@@ -105,20 +173,25 @@ ul {
                     clear: both;
                     float: left;
                     bottom: -50px;
-                }
+                }*/
             }
         }
 
         #countdown {
             margin: 40px auto;
-            color: #ffff;
+            color: @white-color;
 
             li {
-                display: inline-block;
+                display: inline-flex;
+                flex-direction: column;
                 font-size: 1em;
                 list-style-type: none;
                 padding: 0;
                 text-transform: uppercase;
+                position: relative;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
 
                 &.days {
                     padding-right: 24px;
@@ -137,6 +210,11 @@ ul {
                     content: ":";
                     text-align: center;
                 }
+            }
+
+            .hours b,
+            .minutes b {
+                align-self: baseline;
             }
         }
 
@@ -158,6 +236,19 @@ ul {
                 margin-bottom: 20px;
                 clear: both;
                 float: right;
+            }
+
+            &::after {
+                content: '';
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                background: url(../assets/puntos-decoracion2x.png) no-repeat center / 100%;
+                display: block;
+                margin-bottom: 20px;
+                clear: both;
+                float: right;
+                top: 520px;
             }
         }
 
@@ -201,8 +292,9 @@ ul {
 
             .img-container {
                 width: 100%;
-                max-width: 300px;
+                max-width: 250px;
                 display: block;
+                margin-bottom: 20px;
 
             }
 
@@ -243,6 +335,31 @@ ul {
         font-family: 'Roboto Mono', Arial, Tahoma, sans-serif;
         color: #52208a;
         position: relative;
+
+        .container {
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                background: url(../assets/arrow-puprple-up.png) no-repeat center / contain;
+
+
+            }
+
+            &::before {
+                content: '';
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                background: url(../assets/arrow-puprple-up.png) no-repeat center / contain;
+                transform: rotate(180deg);
+                right: 0;
+
+            }
+        }
 
         &::after {
             content: '';
@@ -325,14 +442,22 @@ ul {
             }
 
             .agenda-point-item.slick-slide.slick-current.slick-active.slick-center {
+                background: rgb(255 255 255 / 65%);
+                z-index: 0;
+                border-radius: 6px;
+                box-shadow: 4px 8px 20px rgb(25 25 25 / 5%);
+
                 h3 {
                     font-size: 1.1rem;
                     filter: blur(0);
                     margin: 20px auto;
+                    font-weight: 900;
                 }
             }
         }
     }
+
+
 
     #bimx-speakers {
         background: url('../assets/bg-lp2x.jpg') center center / cover #551273;
@@ -417,6 +542,7 @@ ul {
                     border: 1px solid #fff;
                     border-radius: 8px;
                     overflow: hidden;
+
                     &::after {
                         content: "";
                         width: 100%;
@@ -434,11 +560,12 @@ ul {
                         overflow: hidden;
 
                     }
-                     img{
+
+                    img {
                         opacity: 0.5;
                         border-radius: 8px;
                         border: 2px solid #ffffff47;
-                     }
+                    }
                 }
 
                 &.slick-slide:not(.slick-current) {
@@ -447,14 +574,15 @@ ul {
                             filter: blur(3px);
                         }
                     }
-                    
+
                 }
 
                 &.slick-slide.slick-current {
-                    
+
                     .img-container {
                         width: 240px !important;
                         transition: all 0.3s ease-in-out;
+
                         img {
                             opacity: 0.8;
                             filter: blur(2px);
@@ -470,6 +598,31 @@ ul {
         color: #fff;
         position: relative;
         padding-bottom: 250px !important;
+
+        .container {
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                background: url(../assets/arrow-puprple-up.png) no-repeat center / contain;
+                filter: invert(1) hue-rotate(337deg);
+
+
+            }
+
+            &::before {
+                content: '';
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                background: url(../assets/arrow-puprple-up.png) no-repeat center / contain;
+                right: 0;
+                filter: invert(1) hue-rotate(337deg);
+            }
+        }
 
         &::after {
             content: '';
@@ -625,6 +778,68 @@ ul {
             display: block;
             right: 20px;
             bottom: 0;
+        }
+
+        .container {
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                background: url(../assets/arrow-puprple-up.png) no-repeat center / contain;
+                filter: invert(1) hue-rotate(337deg);
+
+
+            }
+
+            &::before {
+                content: '';
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                background: url(../assets/arrow-puprple-up.png) no-repeat center / contain;
+                right: 0;
+                filter: invert(1) hue-rotate(337deg);
+            }
+        }
+
+        #sec-agenda-title {
+            position: relative;
+            display: inline-flex;
+            margin: 0px auto;
+            float: none;
+            width: auto;
+
+            &:before {
+                content: '';
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                background: url(../assets/puntos-decoracion2x.png) no-repeat center/100%;
+                display: block;
+                margin-bottom: 20px;
+                clear: both;
+                right: -200px;
+            }
+        }
+
+        #agenda-items-hours-wrapper {
+            position: relative;
+
+            &:after {
+                content: '';
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                background: url(../assets/puntos-decoracion2x.png) no-repeat center/100%;
+                display: block;
+                margin-bottom: 20px;
+                clear: both;
+                bottom: 50%;
+                left: 150px;
+            }
         }
 
         h2 {
