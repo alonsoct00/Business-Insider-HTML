@@ -53,7 +53,7 @@ $(document).ready(function() {
         vertical: true,
         verticalSwiping: true,
         centerMode: true,
-        centerPadding: '120px',
+        centerPadding: '140px',
         slidesToShow: 3,
         slidesToScroll: 1,
         responsive: [
