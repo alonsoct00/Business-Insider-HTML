@@ -58,6 +58,24 @@ ul {
 
 #lp-insider-talks {
 
+    section:not('.whitebg') {
+        &::before {
+            background: url('../assets/bg-lp2x.jpg');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            z-index: 0;
+            content: "";
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            width: 100%;
+            height: 100%;
+            display: block;
+            opacity: 0.4
+
+        }
+    }
+
     .navbar {
         background: #28285b !important;
 
@@ -111,7 +129,7 @@ ul {
     }
 
     header {
-        background: url('../assets/bg-lp2x.jpg') center center / cover #551273;
+        background: url('../assets/bg-bitalks.png') center center / cover #551273;
         position: relative;
 
         &::after {
@@ -281,7 +299,7 @@ ul {
     }
 
     #all-info {
-        background: url('../assets/bg-lp2x.jpg') center center / cover #551273;
+        background: url('../assets/bg-bitalks.png') center center / cover #551273;
 
         #bimx-logo {
             margin-bottom: 40px;
@@ -477,7 +495,7 @@ ul {
 
 
     #bimx-speakers {
-        background: url('../assets/bg-lp2x.jpg') center center / cover #551273;
+        background: url('../assets/bg-bitalks.png') center center / cover #551273;
         color: #fff;
         position: relative;
 
@@ -625,7 +643,7 @@ ul {
     }
 
     #bimx-podcasting {
-        background: url('../assets/bg-lp2x.jpg') center center / cover #551273;
+        background: url('../assets/bg-bitalks.png') center center / cover #551273;
         color: #fff;
         position: relative;
         padding-bottom: 250px !important;
@@ -795,7 +813,7 @@ ul {
     }
 
     #bimx-agenda-events {
-        background: url('../assets/bg-lp2x.jpg') center center / cover #551273;
+        background: url('../assets/bg-bitalks.png') center center / cover #551273;
         font-family: 'Roboto Mono', Arial, Tahoma, sans-serif;
         color: #ffffff;
         position: relative;
@@ -894,10 +912,20 @@ ul {
         }
 
         .sponsor-item {
+            &.first-sponsor {
+                span.img-container {
+                    width: 30%;
+                    margin: 0px auto;
+                }
+            }
             span.img-container {
-                width: 100%;
+                width: 40%;
                 display: block;
-                background: red;
+                margin: 0px auto;
+                min-height: 130px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
     }
