@@ -17,7 +17,7 @@
         mm = String(today.getMonth() + 1).padStart(2, "0"),
         yyyy = today.getFullYear(),
         nextYear = yyyy + 1,
-        dayMonth = "10/06/",
+        dayMonth = "10/06/", //aqui se cambia la fecha limita
         birthday = dayMonth + yyyy;
 
     today = mm + "/" + dd + "/" + yyyy;
@@ -53,17 +53,17 @@ $(document).ready(function() {
         vertical: true,
         verticalSwiping: true,
         centerMode: true,
-        centerPadding: '140px',
+        centerPadding: '180px',
         slidesToShow: 3,
         slidesToScroll: 1,
         responsive: [
             {
                 breakpoint: 580,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                     centerMode: true,
-                    centerPadding: '120px'
+                    centerPadding: '300px'
                 }
             }
         ]
